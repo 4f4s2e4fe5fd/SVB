@@ -3,28 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="绿色主题毛玻璃效果网页设计 - 现代UI设计展示">
-    <meta name="keywords" content="毛玻璃效果,绿色主题,网页设计,现代UI,CSS效果">
-    <meta name="author" content="EcoDesign">
-    <title>绿色毛玻璃设计 - EcoDesign</title>
-    
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="绿色毛玻璃设计 - EcoDesign">
-    <meta property="og:description" content="现代化绿色主题毛玻璃效果网页设计展示">
-    <meta property="og:type" content="website">
-    
+    <title>Minecraft下载指南</title>
     <style>
-        /* 基础样式和绿色主题变量定义 */
-        :root {
-            --primary-color: rgba(46, 204, 113, 0.8);
-            --secondary-color: rgba(39, 174, 96, 0.6);
-            --accent-color: rgba(255, 255, 255, 0.2);
-            --text-color: #ffffff;
-            --dark-text: #2c3e50;
-            --shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
-            --border: 1px solid rgba(255, 255, 255, 0.18);
-        }
-        
         * {
             margin: 0;
             padding: 0;
@@ -32,405 +12,351 @@
         }
         
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: var(--text-color);
+            font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+            background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%);
             min-height: 100vh;
-            background: linear-gradient(135deg, #1d976c 0%, #93f9b9 100%);
-            background-attachment: fixed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.8s ease;
+            position: relative;
+            overflow-x: hidden;
             padding: 20px;
         }
         
-        /* 毛玻璃效果容器 */
-        .glass-container {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            border-radius: 20px;
-            border: var(--border);
-            box-shadow: var(--shadow);
-            padding: 2rem;
-            margin-bottom: 2rem;
+        /* 背景装饰元素 */
+        body::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(46, 204, 113, 0.1) 20%, transparent 20%);
+            background-size: 50px 50px;
+            animation: float 20s infinite linear;
+            z-index: 0;
         }
         
-        /* 导航栏毛玻璃效果 */
-        header {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(15px);
-            -webkit-backdrop-filter: blur(15px);
-            border-radius: 15px;
-            border: var(--border);
-            box-shadow: var(--shadow);
-            padding: 1rem 2rem;
-            margin-bottom: 2rem;
+        @keyframes float {
+            0% { transform: translate(0, 0) rotate(0deg); }
+            100% { transform: translate(-50px, -50px) rotate(360deg); }
         }
         
         .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            padding: 60px 40px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1),
+                        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+            text-align: center;
+            max-width: 800px;
+            width: 100%;
+            transition: all 0.8s ease;
+            z-index: 2;
+            position: relative;
         }
         
         .logo {
-            font-size: 1.8rem;
-            font-weight: 700;
-            background: linear-gradient(45deg, #ffffff, #d1f7e5);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        
-        .nav-links {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(45deg, #27ae60, #2ecc71);
+            border-radius: 50%;
+            margin: 0 auto 30px;
             display: flex;
-            list-style: none;
-            gap: 2rem;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            transition: all 0.8s ease;
+            box-shadow: 0 10px 20px rgba(39, 174, 96, 0.3);
         }
         
-        .nav-links a {
-            color: var(--text-color);
-            text-decoration: none;
-            font-weight: 500;
-            padding: 0.5rem 1rem;
-            border-radius: 25px;
-            transition: all 0.3s ease;
+        h1 {
+            color: white;
+            margin-bottom: 10px;
+            font-size: 2.2em;
+            font-weight: 600;
+            transition: all 0.8s ease;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
         }
         
-        .nav-links a:hover {
-            background: rgba(255, 255, 255, 0.2);
-            transform: translateY(-2px);
+        .subtitle {
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 40px;
+            font-size: 1.1em;
+            line-height: 1.6;
+            transition: all 0.8s ease;
         }
         
-        /* 主要内容区域 */
-        .hero {
-            text-align: center;
-            padding: 4rem 0;
-        }
-        
-        .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 1.5rem;
-            font-weight: 700;
-            background: linear-gradient(45deg, #ffffff, #d1f7e5);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        
-        .hero p {
-            font-size: 1.3rem;
-            max-width: 700px;
-            margin: 0 auto 3rem;
-            line-height: 1.8;
-        }
-        
-        /* 毛玻璃按钮 */
-        .btn {
+        .download-btn {
             display: inline-block;
-            background: rgba(255, 255, 255, 0.2);
+            background: linear-gradient(45deg, #27ae60, #2ecc71);
+            color: white;
+            text-decoration: none;
+            padding: 15px 40px;
+            border-radius: 50px;
+            font-size: 1.1em;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 20px rgba(39, 174, 96, 0.3);
+            border: none;
+            cursor: pointer;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            margin-bottom: 30px;
+        }
+        
+        .download-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 30px rgba(39, 174, 96, 0.4);
+            background: linear-gradient(45deg, #2ecc71, #27ae60);
+        }
+        
+        .download-btn:active {
+            transform: translateY(0);
+        }
+        
+        /* 下载进度条样式 */
+        .progress-container {
+            width: 100%;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 15px;
+            margin: 20px 0;
+            display: none;
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
-            color: var(--text-color);
-            padding: 1rem 2.5rem;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            border: var(--border);
-            transition: all 0.3s ease;
-            box-shadow: var(--shadow);
+            border: 1px solid rgba(255, 255, 255, 0.2);
         }
         
-        .btn:hover {
-            background: rgba(46, 204, 113, 0.4);
-            transform: translateY(-3px);
-            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+        .progress-container.active {
+            display: block;
         }
         
-        /* 功能卡片区域 */
-        .features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin: 3rem 0;
+        .progress-bar {
+            width: 100%;
+            height: 12px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 6px;
+            overflow: hidden;
+            margin-bottom: 10px;
         }
         
-        .feature-card {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border-radius: 20px;
-            border: var(--border);
-            padding: 2rem;
-            text-align: center;
-            transition: all 0.3s ease;
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #27ae60, #2ecc71);
+            border-radius: 6px;
+            width: 0%;
+            transition: width 0.3s ease;
+            position: relative;
         }
         
-        .feature-card:hover {
-            transform: translateY(-5px);
-            background: rgba(255, 255, 255, 0.15);
+        .progress-fill::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background-image: linear-gradient(
+                -45deg,
+                rgba(255, 255, 255, 0.2) 25%,
+                transparent 25%,
+                transparent 50%,
+                rgba(255, 255, 255, 0.2) 50%,
+                rgba(255, 255, 255, 0.2) 75%,
+                transparent 75%,
+                transparent
+            );
+            background-size: 20px 20px;
+            animation: move 1s linear infinite;
         }
         
-        .feature-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            background: linear-gradient(45deg, #ffffff, #a8f5c8);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+        @keyframes move {
+            0% { background-position: 0 0; }
+            100% { background-position: 20px 0; }
         }
         
-        .feature-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-        }
-        
-        .feature-card p {
+        .progress-info {
+            display: flex;
+            justify-content: space-between;
             color: rgba(255, 255, 255, 0.9);
+            font-size: 0.9em;
         }
         
-        /* 绿色主题特色区域 */
-        .green-section {
-            background: rgba(46, 204, 113, 0.1);
-            backdrop-filter: blur(15px);
-            -webkit-backdrop-filter: blur(15px);
-            border-radius: 20px;
-            border: 1px solid rgba(46, 204, 113, 0.3);
-            padding: 3rem;
-            margin: 2rem 0;
-            text-align: center;
-        }
-        
-        /* GitHub Pages 特殊区域 */
-        .github-info {
+        .instructions {
             background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(12px);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
             border-radius: 15px;
-            border: var(--border);
-            padding: 2rem;
-            margin: 2rem 0;
+            padding: 25px;
+            text-align: left;
+            margin-top: 20px;
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1em;
+            line-height: 1.6;
+            max-height: 400px;
+            overflow-y: auto;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
         }
         
-        /* 页脚 */
-        footer {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(15px);
-            -webkit-backdrop-filter: blur(15px);
-            border-radius: 15px;
-            border: var(--border);
+        .instructions h3 {
+            color: white;
+            margin-bottom: 15px;
             text-align: center;
-            padding: 2rem;
-            margin-top: 3rem;
+            font-size: 1.3em;
         }
         
-        /* 响应式设计 */
+        .instructions ol {
+            padding-left: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .instructions li {
+            margin-bottom: 15px;
+        }
+        
+        .instructions strong {
+            color: white;
+        }
+        
+        .instructions a {
+            color: #2ecc71;
+            text-decoration: none;
+            border-bottom: 1px dotted #2ecc71;
+            transition: all 0.3s ease;
+        }
+        
+        .instructions a:hover {
+            color: #27ae60;
+            border-bottom: 1px solid #27ae60;
+        }
+        
+        .warning {
+            background: rgba(231, 76, 60, 0.2);
+            border-left: 4px solid #e74c3c;
+            padding: 10px 15px;
+            margin-top: 15px;
+            border-radius: 0 5px 5px 0;
+        }
+        
+        .footer {
+            margin-top: 40px;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9em;
+            transition: all 0.8s ease;
+        }
+        
         @media (max-width: 768px) {
-            .nav-links {
-                display: none;
+            .container {
+                padding: 40px 20px;
             }
             
-            .hero h1 {
-                font-size: 2.5rem;
+            .instructions {
+                padding: 20px;
+                font-size: 0.95em;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8em;
             }
             
-            .features {
-                grid-template-columns: 1fr;
+            .subtitle {
+                font-size: 1em;
             }
             
-            .hero {
-                padding: 2rem 0;
+            .download-btn {
+                padding: 12px 30px;
+                font-size: 1em;
             }
             
-            .green-section, .github-info {
-                padding: 2rem 1rem;
+            .instructions {
+                padding: 15px;
+                font-size: 0.9em;
             }
-        }
-        
-        /* 动画效果 */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        .fade-in {
-            animation: fadeInUp 0.8s ease-out;
-        }
-        
-        /* 绿色主题特殊动画 */
-        @keyframes greenPulse {
-            0% {
-                box-shadow: 0 0 0 0 rgba(46, 204, 113, 0.4);
-            }
-            70% {
-                box-shadow: 0 0 0 10px rgba(46, 204, 113, 0);
-            }
-            100% {
-                box-shadow: 0 0 0 0 rgba(46, 204, 113, 0);
-            }
-        }
-        
-        .pulse {
-            animation: greenPulse 2s infinite;
-        }
-        
-        /* 加载优化 */
-        .loading {
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-        
-        .loaded {
-            opacity: 1;
         }
     </style>
 </head>
 <body>
-    <header class="fade-in">
-        <div class="container">
-            <nav>
-                <div class="logo">EcoDesign</div>
-                <ul class="nav-links">
-                    <li><a href="#home">首页</a></li>
-                    <li><a href="#features">特性</a></li>
-                    <li><a href="#about">关于</a></li>
-                    <li><a href="#github">GitHub</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-    
-    <main>
-        <div class="container">
-            <section class="hero fade-in" id="home">
-                <h1>自然与科技的完美融合</h1>
-                <p>绿色主题的毛玻璃设计，带来清新自然的视觉体验，融合生态美学与现代技术</p>
-                <a href="#features" class="btn pulse">探索绿色世界</a>
-            </section>
-            
-            <div class="features" id="features">
-                <div class="feature-card fade-in">
-                    <div class="feature-icon">🌿</div>
-                    <h3>生态友好</h3>
-                    <p>采用自然绿色调，营造舒适和谐的视觉环境，减少视觉疲劳</p>
-                </div>
-                
-                <div class="feature-card fade-in">
-                    <div class="feature-icon">💚</div>
-                    <h3>清新自然</h3>
-                    <p>绿色主题带来生机与活力，创造积极向上的用户体验</p>
-                </div>
-                
-                <div class="feature-card fade-in">
-                    <div class="feature-icon">🌱</div>
-                    <h3>可持续发展</h3>
-                    <p>现代化的设计理念，注重长期使用体验和视觉持久性</p>
-                </div>
+    <div class="container">
+        <div class="logo">MC</div>
+        <h1>Minecraft下载指南</h1>
+        <p class="subtitle">按照以下步骤下载并安装Minecraft游戏</p>
+        <button class="download-btn" id="downloadBtn">
+            开始下载
+        </button>
+        
+        <!-- 下载进度条 -->
+        <div class="progress-container" id="progressContainer">
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
             </div>
-            
-            <div class="green-section fade-in" id="about">
-                <h2>绿色设计理念</h2>
-                <p>绿色不仅是一种颜色，更是一种生活态度。我们的设计理念是将自然的宁静与现代科技完美结合，创造出既美观又舒适的用户体验。</p>
-            </div>
-            
-            <div class="github-info fade-in" id="github">
-                <h2>GitHub Pages 部署</h2>
-                <p>此页面已优化用于 GitHub Pages 托管。GitHub Pages 提供免费的静态网站托管服务，支持自定义域名和 HTTPS。</p>
-                <div style="margin-top: 1.5rem;">
-                    <a href="https://pages.github.com/" class="btn" target="_blank" rel="noopener">了解 GitHub Pages</a>
-                </div>
-            </div>
-            
-            <div class="glass-container fade-in">
-                <h2>毛玻璃效果在绿色主题中的应用</h2>
-                <p>绿色主题的毛玻璃设计通过柔和的背景模糊和半透明效果，创造出如森林般清新的视觉层次。这种设计风格特别适合环保、健康、科技类网站，能够有效传达清新、自然的品牌形象。</p>
+            <div class="progress-info">
+                <span id="progressStatus">准备下载...</span>
+                <span id="progressPercentage">0%</span>
             </div>
         </div>
-    </main>
-    
-    <footer class="fade-in">
-        <div class="container">
-            <p>&copy; 2023 EcoDesign. 保留所有权利. | 托管于 GitHub Pages</p>
-            <p style="margin-top: 0.5rem; opacity: 0.8; font-size: 0.9rem;">
-                绿色主题毛玻璃效果展示
-            </p>
+        
+        <div class="instructions">
+            <h3>Minecraft下载与安装指南</h3>
+            <p>首先，打开Microsoft Store，输入"minecraft"点击第一个，找到捆绑包，点击"Minecraft for Windows"再点击安装免费版，等待安装完成(如果下载不了，输入<a href="https://mc.minebbs.com/#/windows" target="_blank">https://mc.minebbs.com/#/windows</a>在浏览器下载，但是这样下载时间会更慢），打开破解工具(破解工具放在最后)点击"install mode"，再点击"start operation"，像我这样出现success就破解成功了，如果破解失败，就先打开minecraft再破解！</p>
+            
+            <div class="warning">
+                <strong>注意：</strong>破解游戏可能违反用户协议，请确保您了解相关风险并遵守当地法律法规。建议支持正版游戏。
+            </div>
         </div>
-    </footer>
+        
+        <p class="footer">按照上述步骤操作，即可成功下载并安装Minecraft</p>
+    </div>
 
     <script>
-        // 页面加载优化
         document.addEventListener('DOMContentLoaded', function() {
-            // 标记页面已加载
-            document.body.classList.add('loaded');
+            const downloadBtn = document.getElementById('downloadBtn');
+            const progressContainer = document.getElementById('progressContainer');
+            const progressFill = document.getElementById('progressFill');
+            const progressStatus = document.getElementById('progressStatus');
+            const progressPercentage = document.getElementById('progressPercentage');
             
-            // 滚动动画效果
-            const observerOptions = {
-                threshold: 0.1,
-                rootMargin: '0px 0px -50px 0px'
-            };
-            
-            const observer = new IntersectionObserver(function(entries) {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.style.opacity = 1;
-                        entry.target.style.transform = 'translateY(0)';
+            downloadBtn.addEventListener('click', function() {
+                // 显示进度条
+                progressContainer.classList.add('active');
+                
+                // 模拟下载开始
+                downloadBtn.textContent = '下载中...';
+                downloadBtn.disabled = true;
+                progressStatus.textContent = '下载中...';
+                
+                // 显示下载进度
+                let progress = 0;
+                const interval = setInterval(() => {
+                    progress += Math.random() * 15;
+                    if (progress >= 100) {
+                        progress = 100;
+                        clearInterval(interval);
+                        downloadComplete();
                     }
-                });
-            }, observerOptions);
-            
-            // 为所有需要动画的元素添加观察
-            const fadeElements = document.querySelectorAll('.fade-in');
-            fadeElements.forEach(el => {
-                el.style.opacity = 0;
-                el.style.transform = 'translateY(20px)';
-                el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-                observer.observe(el);
+                    
+                    progressFill.style.width = progress + '%';
+                    progressPercentage.textContent = Math.floor(progress) + '%';
+                }, 500);
             });
             
-            // 平滑滚动
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    const target = document.querySelector(this.getAttribute('href'));
-                    if (target) {
-                        target.scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'start'
-                        });
-                    }
-                });
-            });
-            
-            // 绿色脉冲动画控制
-            const pulseBtn = document.querySelector('.pulse');
-            if (pulseBtn) {
+            function downloadComplete() {
+                progressStatus.textContent = '下载完成！';
+                downloadBtn.textContent = '下载完成';
+                
+                // 3秒后跳转到指定链接
                 setTimeout(() => {
-                    pulseBtn.style.animation = 'greenPulse 2s infinite';
-                }, 1000);
+                    window.location.href = 'https://wwblb.lanzoul.com/i99WC3ctn4bi';
+                }, 3000);
             }
-        });
-        
-        // 页面性能优化
-        window.addEventListener('load', function() {
-            // 预加载优化
-            const links = document.querySelectorAll('a[href^="#"]');
-            links.forEach(link => {
-                link.addEventListener('mouseenter', function() {
-                    const target = document.querySelector(this.getAttribute('href'));
-                    if (target) {
-                        // 预加载目标区域
-                    }
-                });
-            });
         });
     </script>
 </body>
